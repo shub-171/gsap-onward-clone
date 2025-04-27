@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This IS Onward | Website Clone</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body data-theme="light">
+    <main id="main" class="relative">
+        <header class="flex justify-between items-center h-[8rem] px-[6rem] fixed w-full top-0 left-0 z-10 text-white">
+            <div class="logo">
+                <a href="/" class="w-max block">
+                    <svg class="h-[2rem]" xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 109 20"
+                        fill="none" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px);">
+                        <path
+                            d="M16.6514 10.4942C16.3856 15.19 13.4235 20.2851 7.86017 19.9809C2.79049 19.7147 -0.266504 15.152 0.0183096 9.80981C0.265148 5.15203 3.0943 0.0189595 8.75259 0.342153C14.0501 0.627323 16.9362 5.36115 16.6514 10.4942ZM11.5438 13.2319C13.4235 9.86684 15.0375 4.79081 11.8665 3.00374C9.60703 1.72998 7.2146 3.38397 5.14495 7.09118C3.26518 10.4562 1.63225 15.6273 4.7652 17.3763C7.02472 18.6501 9.43614 17.0341 11.5438 13.2319Z"
+                            fill="currentColor"></path>
+                        <path
+                            d="M33.0361 19.9429H31.593L21.9284 5.74143L21.1119 4.56273V15.6463C21.1119 17.2813 21.2448 18.5171 22.0043 19.7528H18.3207C19.0612 18.5171 19.1941 17.3003 19.1941 15.6463V3.68821C19.1941 2.73764 18.8144 1.74905 18.2448 1.06464C18.1119 0.874526 17.9789 0.79848 17.7891 0.608367H22.7258L31.1373 13.0798V4.69581C31.1373 3.06083 31.0044 1.82509 30.2259 0.589355H33.9475C33.188 1.82509 33.0551 3.04182 33.0551 4.69581V19.9239L33.0361 19.9429Z"
+                            fill="currentColor"></path>
+                        <path
+                            d="M52.7278 19.962H52.405L47.4113 7.50951L42.3226 19.962H42.0188L38.2783 7.87073C36.9681 3.63119 36.5884 2.43348 35.582 0.589378H41.0125C40.8796 1.21675 40.7466 1.65401 40.7466 2.33842C40.7466 3.19393 40.9745 4.35363 41.6201 6.63499L43.4809 13.0989L48.3037 0.456299H48.6075L53.2215 12.8137L55.0063 6.63499C55.7468 4.03043 55.9937 2.66162 55.9937 1.76808C55.9937 1.25478 55.9177 0.912571 55.8228 0.589378H59.7342C58.3861 2.37645 58.1772 2.90876 56.7911 7.20533L52.7468 19.962H52.7278Z"
+                            fill="currentColor"></path>
+                        <path
+                            d="M66.4008 0L71.8312 14.5057C72.9325 17.4904 73.4072 18.384 74.5085 19.7528H68.7932C69.0401 19.2395 69.154 18.7072 69.154 18.2129C69.154 17.4714 68.9261 16.8251 68.6034 15.9125L68.1097 14.4867H61.7678L61.2931 16.0266C60.9893 16.8821 60.8564 17.5285 60.8564 18.1558C60.8564 18.6501 60.9704 19.1634 61.2172 19.7148H57.002C58.1032 18.403 58.6729 17.5285 59.4513 15.2091L62.9261 5.09504C63.1159 4.58174 63.1919 4.10645 63.1919 3.72623C63.1919 3.04182 62.9261 2.60456 62.4514 2.18631C63.6286 1.95817 65.6223 0.950568 66.3628 0L66.4008 0ZM64.7679 5.11406L62.3375 12.8327H67.5211L65.6033 7.35739C65.2995 6.50188 65.0527 5.77945 64.7489 5.11406H64.7679Z"
+                            fill="currentColor"></path>
+                        <path
+                            d="M76.8617 4.69581C76.8617 3.06083 76.7288 1.82509 75.9883 0.589355H81.2099C86.5833 0.589355 89.2986 2.69962 89.2986 5.74143C89.2986 8.23192 87.4378 10.114 84.9504 10.6464C86.1466 10.9505 87.2099 12.1483 88.1213 14.3156L88.3112 14.7528C89.3175 16.9962 89.7543 17.6996 90.3049 17.6996C90.5517 17.6996 90.7416 17.5855 90.8745 17.3384C91.1024 17.6045 91.1973 17.9087 91.1973 18.2699C91.1973 19.2205 90.4568 20 88.9378 20C87.153 20 86.0897 18.9543 85.0074 15.7604L84.8745 15.3422C83.7732 12.1863 82.7479 11.4068 80.4693 11.4068H80.4124V15.6463C80.4124 17.2813 80.5263 18.5171 81.2858 19.7528H75.9883C76.7478 18.5171 76.8617 17.3003 76.8617 15.6463V4.69581ZM81.1339 2.31939H80.4314V9.73382H81.039C84.077 9.73382 85.596 8.47907 85.596 5.95056C85.596 3.42205 84.2858 2.31939 81.1529 2.31939H81.1339Z"
+                            fill="currentColor"></path>
+                        <path
+                            d="M93.5707 4.69577C93.5707 3.06079 93.4568 1.82505 92.6973 0.589315H96.4758C97.4252 0.570304 98.7733 0.418213 99.7227 0.418213C105.628 0.418213 108.856 4.98094 108.856 9.99994C108.856 14.6767 106.102 19.9049 99.7796 19.9049C98.8302 19.9049 97.672 19.7718 96.5517 19.7338H92.6973C93.4568 18.6121 93.5707 17.4904 93.5707 15.9885V4.69577ZM97.1214 2.43342V17.3763C98.0138 17.8516 99.0581 18.0798 100.178 18.0798C103.539 18.0798 104.849 15.0189 104.849 11.2927C104.849 7.35736 103.71 2.31935 99.3619 2.31935C98.3556 2.31935 97.634 2.33836 97.1214 2.43342Z"
+                            fill="currentColor"></path>
+                    </svg>
+                </a>
+            </div>
+            <nav class="flex justify-between items-center flex-1 text-[1.6rem] max-w-[45%] leading-6">
+                <div class="menu">
+                    <ul class="list-none flex gap-10">
+                        <li><a href="#">Work</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Team</a></li>
+                        <li><a href="#">careers</a></li>
+                    </ul>
+                </div>
+                <div class="cta">
+                    <a href="#">Contact</a>
+                </div>
+            </nav>
+        </header>
+
+        <section
+            class="hero-section relative min-h-[700px] h-screen overflow-hidden pt-[14rem] pb-[4rem] flex flex-col justify-between text-white">
+            <div class="video h-full w-full absolute top-0 left-0 z-[-1]">
+                <video muted loop autoplay class="w-full h-full object-cover object-center">
+                    <source src="./video.mp4">
+                </video>
+            </div>
+            <div class="h-max w-full px-[6rem]">
+                <h1 class="fade_up_multi_h1 text-[7.4rem] font-dm-serif font-medium mix-blend-difference leading-[1.2]">
+                    <div class="overflow-hidden"><span class="inline-block">At Onward, we believe culture is the</span>
+                    </div>
+                    <div class="overflow-hidden"><span class="inline-block">winning strategy. We help you tune in
+                            to</span> </div>
+                    <div class="overflow-hidden"><span class="inline-block">yours—and transform your organization</span>
+                    </div>
+                    <div class="overflow-hidden"><span class="inline-block">for ultimate impact.</span></div>
+                </h1>
+            </div>
+            <span class="scroll relative px-[6rem]">Scroll</span>
+        </section>
+
+        <section data-color="light"
+            class="section section-fade-up info-section min-h-screen p-20 flex flex-col gap-[15rem]">
+            <h2 class="fade_up_multi text-[5.8rem] font-ibm-serif font-normal w-[75%] leading-[1.3]">
+                <div class="overflow-hidden"><span class="inline-block">The most exciting high-growth brands</span>
+                </div>
+                <div class="overflow-hidden"><span class="inline-block">put culture at their core. <em>The data shows
+                            it. And we’ve seen it.</span></em></div>
+            </h2>
+            <div class="card-box flex flex-col gap-[15rem]">
+                <div class="card-container-1 flex justify-between flex-col sm:flex-row gap-[19rem]">
+                    <div class="card-1 exclude bg-white p-12 rounded-3xl h-max flex flex-col gap-5 w-[50%]">
+                        <h2 class="text-[2rem] font-normal">The data suggests that higher rates of diversity correlate
+                            to higher financial performance.</h2>
+                        <h3 class="text-[1.7rem] font-medium"><em>Gender and ethnic diversity combined</em></h3>
+
+                        <div class="progress-1 bg-orange-600 p-[0.8rem] rounded-xl flex justify-between w-max">
+                            <span>Top Quartile</span>
+                            <span>53</span>
+                        </div>
+                        <div class="progress-2 flex justify-start items-center gap-[1.5rem] w-max">
+                            <div class="bg-red-950 text-orange-600 p-[0.8rem] w-full rounded-xl flex justify-between">
+                                <span>All other quartiles</span>
+                                <span>40</span>
+                            </div>
+                            <svg class="h-[3rem] inline-block" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 34"
+                                fill="none">
+                                <path d="M126.62 0.295654L126.62 33.2957" stroke="currentColor" stroke-dasharray="2 2">
+                                </path>
+                                <path opacity="0.5"
+                                    d="M0.619141 17.2957L5.61914 20.1824V14.4089L0.619141 17.2957ZM114.619 17.2957L109.619 14.4089V20.1824L114.619 17.2957ZM5.11914 17.7957H110.119V16.7957H5.11914V17.7957Z"
+                                    fill="currentColor"></path>
+                                <path d="M33.619 3.29562L80.619 3.29562L80.619 26.2956L33.619 26.2956L33.619 3.29562Z"
+                                    fill="white"></path>
+                                <path
+                                    d="M45.8585 17.0636L42.4505 17.0636L42.4505 20.5196L41.0905 20.5196L41.0905 17.0636L37.6985 17.0636L37.6985 15.8316L41.0905 15.8316L41.0905 12.3596L42.4505 12.3596L42.4505 15.8316L45.8585 15.8316L45.8585 17.0636Z"
+                                    fill="currentColor"></path>
+                                <path
+                                    d="M48.0444 21.1276C49.3991 20.0396 50.4604 19.149 51.2284 18.4556C51.9964 17.7516 52.6417 17.021 53.1644 16.2636C53.6977 15.4956 53.9644 14.7436 53.9644 14.0076C53.9644 13.3143 53.7937 12.7703 53.4524 12.3756C53.1217 11.9703 52.5831 11.7676 51.8364 11.7676C51.1111 11.7676 50.5457 11.997 50.1404 12.4556C49.7457 12.9036 49.5324 13.5063 49.5004 14.2636L48.0924 14.2636C48.1351 13.069 48.4977 12.1463 49.1804 11.4956C49.8631 10.845 50.7431 10.5196 51.8204 10.5196C52.9191 10.5196 53.7884 10.8236 54.4284 11.4316C55.0791 12.0396 55.4044 12.877 55.4044 13.9436C55.4044 14.829 55.1377 15.693 54.6044 16.5356C54.0817 17.3676 53.4844 18.1036 52.8124 18.7436C52.1404 19.373 51.2817 20.109 50.2364 20.9516L55.7404 20.9516L55.7404 22.1676L48.0444 22.1676L48.0444 21.1276Z"
+                                    fill="currentColor"></path>
+                                <path
+                                    d="M64.7995 11.9916L59.1835 11.9916L59.1835 15.6396C59.4289 15.2983 59.7915 15.021 60.2715 14.8076C60.7515 14.5836 61.2689 14.4716 61.8235 14.4716C62.7089 14.4716 63.4289 14.6583 63.9835 15.0316C64.5382 15.3943 64.9329 15.869 65.1675 16.4556C65.4129 17.0316 65.5355 17.645 65.5355 18.2956C65.5355 19.0636 65.3915 19.7516 65.1035 20.3596C64.8155 20.9676 64.3729 21.4476 63.7755 21.7996C63.1889 22.1516 62.4582 22.3276 61.5835 22.3276C60.4635 22.3276 59.5569 22.0396 58.8635 21.4636C58.1702 20.8876 57.7489 20.1196 57.5995 19.1596L59.0235 19.1596C59.1622 19.7676 59.4555 20.2423 59.9035 20.5836C60.3515 20.925 60.9169 21.0956 61.5995 21.0956C62.4422 21.0956 63.0769 20.845 63.5035 20.3436C63.9302 19.8316 64.1435 19.1596 64.1435 18.3276C64.1435 17.4956 63.9302 16.8556 63.5035 16.4076C63.0769 15.949 62.4475 15.7196 61.6155 15.7196C61.0502 15.7196 60.5542 15.8583 60.1275 16.1356C59.7115 16.4023 59.4075 16.7703 59.2155 17.2396L57.8395 17.2396L57.8395 10.7116L64.7995 10.7116L64.7995 11.9916Z"
+                                    fill="currentColor"></path>
+                                <path
+                                    d="M67.1504 13.3356C67.1504 12.6103 67.3691 12.0343 67.8064 11.6076C68.2437 11.1703 68.8037 10.9516 69.4864 10.9516C70.1691 10.9516 70.7291 11.1703 71.1664 11.6076C71.6037 12.0343 71.8224 12.6103 71.8224 13.3356C71.8224 14.0716 71.6037 14.6583 71.1664 15.0956C70.7291 15.5223 70.1691 15.7356 69.4864 15.7356C68.8037 15.7356 68.2437 15.5223 67.8064 15.0956C67.3691 14.6583 67.1504 14.0716 67.1504 13.3356ZM76.4944 11.1276L70.0144 22.2956L68.5744 22.2956L75.0544 11.1276L76.4944 11.1276ZM69.4864 11.8476C69.1237 11.8476 68.8357 11.9756 68.6224 12.2316C68.4197 12.477 68.3184 12.845 68.3184 13.3356C68.3184 13.8263 68.4197 14.1996 68.6224 14.4556C68.8357 14.7116 69.1237 14.8396 69.4864 14.8396C69.8491 14.8396 70.1371 14.7116 70.3504 14.4556C70.5637 14.189 70.6704 13.8156 70.6704 13.3356C70.6704 12.845 70.5637 12.477 70.3504 12.2316C70.1371 11.9756 69.8491 11.8476 69.4864 11.8476ZM73.2784 20.0876C73.2784 19.3516 73.4971 18.7703 73.9344 18.3436C74.3717 17.9063 74.9317 17.6876 75.6144 17.6876C76.2971 17.6876 76.8517 17.9063 77.2784 18.3436C77.7157 18.7703 77.9344 19.3516 77.9344 20.0876C77.9344 20.813 77.7157 21.3943 77.2784 21.8316C76.8517 22.269 76.2971 22.4876 75.6144 22.4876C74.9317 22.4876 74.3717 22.2743 73.9344 21.8476C73.4971 21.4103 73.2784 20.8236 73.2784 20.0876ZM75.5984 18.5996C75.2357 18.5996 74.9477 18.7276 74.7344 18.9836C74.5211 19.229 74.4144 19.597 74.4144 20.0876C74.4144 20.5676 74.5211 20.9356 74.7344 21.1916C74.9477 21.437 75.2357 21.5596 75.5984 21.5596C75.9611 21.5596 76.2491 21.437 76.4624 21.1916C76.6757 20.9356 76.7824 20.5676 76.7824 20.0876C76.7824 19.597 76.6757 19.229 76.4624 18.9836C76.2491 18.7276 75.9611 18.5996 75.5984 18.5996Z"
+                                    fill="currentColor"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-[1.7rem] font-medium text-gray-500">Source: McKinsey Diversity Database</h3>
+                    </div>
+                    <div class="card-content w-[50%]">
+                        <h2 class="fade_up_single font-ibm-serif text-[3.4rem] h-max">Culturally-driven
+                            companies<br>have more effective employees<br><em>and</em> exhibit stronger growth.</h2>
+                    </div>
+                </div>
+                <div class="card-container-2 flex justify-between flex-col sm:flex-row gap-[19rem]">
+                    <div class="card-2 text-black bg-white p-12 rounded-3xl h-max flex flex-col gap-5 w-[50%]">
+                        <h2 class="text-[2rem] font-normal">Estimated market size of <br>under-represented groups:</h2>
+                        <div class="font-ibm-serif font-medium market-size text-[7rem]">
+                            $<span class="progress">3</span> Trillion
+                        </div>
+                    </div>
+                    <div class="card-content w-[50%]">
+                        <h2 class="fade_up_single font-ibm-serif text-[3.4rem] h-max">Why? Because rather than risking
+                            <br>missteps with their people or <br>fumbling something in public—<br>they’re reaching new
+                            audiences with authenticity and through employees who feel proud to work there.</h2>
+                        <br><br><a href="#" class="text-[2rem]">‍Meet our team</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section data-color="dark" class="section on-animation-container relative h-max py-[30rem]">
+            <div class=" px-[18rem] h-[200vh] flex items-start w-full relative">
+                <div class="on-animation sticky top-1/2 -translate-y-1/2 mt-[15rem] -mb-[15rem]">
+                    <h2 class="font-dm-serif text-[45rem] leading-[30rem]">ON</h2>
+                </div>
+                <div class="h-[200vh] flex items-center gap-[14rem] w-max absolute">
+                    <div class="flex-1 h-max self-end max-w-[52.8rem]">
+                        <h2 class="fade_up_single font-ibm-serif text-[4.8rem] leading-[1.2]"><em>Turn On</em> &
+                            Drive<br>Growth Goals</h2>
+                        <p class="fade_in_single text-[2.2rem] font-ibm-serif">The game changes when your core
+                            <br>values connect with your offering. You <br>unlock new audiences and your team’s
+                            potential—putting even your most <br>stretch growth goals in reach.
+                            <br><br>
+                            <a href="#">Learn More</a>
+                        </p>
+                    </div>
+                    <div class="flex-1 h-max self-start max-w-[52.8rem]">
+                        <h2 class="fade_up_single font-ibm-serif text-[4.8rem] leading-[1.2]"><em>Tune In</em> &
+                            Transform<br>Internal Culture</h2>
+                        <p class="fade_out_single text-[2.2rem] font-ibm-serif">Something magical happens when you
+                            <br>tap into what you believe, and then <br>translate that into how you hire, treat, <br>and
+                            structure your team.
+                            <br><br>
+                            <a href="#">Learn More</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr>
+        <footer class="h-screen bg-[var(--grey)]">
+            <section data-color="dark"
+                class="section px-[6rem] py-[2.2rem] flex flex-row justify-between border-b border-black">
+                <div>
+                    <ul class="flex gap-[6rem] text-black text-[2.7rem] font-ibm-serif font-normal">
+                        <li>Work</li>
+                        <li>Services</li>
+                        <li>Team</li>
+                        <li>Careers</li>
+                        <li>Contact</li>
+                    </ul>
+                </div>
+                <div>
+                    <ul class="flex gap-[6rem] text-black items-center text-[1.1rem]">
+                        <li>hello@thisisonward.com</li>
+                        <li>Instagram,<br>LinkedIn</li>
+                        <li>© Copyright <br>Onward 2024</li>
+                    </ul>
+                </div>
+            </section>
+            <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 1436 274" fill="none" data-scroll="1"
+    data-scroll-css-progress="1" data-scroll-offset="0%, 120%" class="footer__logo is-inview" style="">
+    <mask id="mask0_2056_38" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="16" y="0" width="215" height="274">
+        <rect x="16.5498" width="213.51" height="274" fill="currentColor"></rect>
+    </mask>
+    <g>
+        <path
+            d="M229.809 142.005C226.404 199.506 188.468 261.895 117.215 258.17C52.2847 254.678 13.1322 199.04 16.7799 133.392C20.1845 76.5897 56.4189 13.7349 128.644 17.4597C196.493 20.9516 233.457 78.9176 229.809 141.772V142.005ZM164.392 175.295C188.468 134.09 209.138 71.9338 168.527 50.051C139.588 34.4537 108.947 54.7069 82.4395 100.102C58.3643 141.307 37.4505 204.627 77.5758 226.044C106.515 241.642 137.399 221.854 164.392 175.295Z"
+            fill="currentColor"></path>
+    </g>
+    <mask id="mask1_2056_38" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="244" y="0" width="208" height="274">
+        <rect x="244.64" width="206.95" height="274" fill="currentColor"></rect>
+    </mask>
+    <g>
+        <path
+            d="M439.92 257.704H421.438L297.657 83.8063L287.2 69.373V205.093C287.2 225.113 288.902 240.245 298.63 255.376H251.452C260.936 240.245 262.639 225.346 262.639 205.093V58.6644C262.639 47.0246 257.775 34.9193 250.479 26.5386C248.777 24.2107 247.075 23.2795 244.643 20.9515H307.871L415.601 173.665V71.0025C415.601 50.9821 413.899 35.8504 403.928 20.7188H451.592C441.865 35.8504 440.163 50.7493 440.163 71.0025V257.471L439.92 257.704Z"
+            fill="currentColor"></path>
+    </g>
+    <mask id="mask2_2056_38" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="472" y="0" width="310" height="274">
+        <rect x="472.26" width="309.57" height="274" fill="currentColor"></rect>
+    </mask>
+    <g>
+        <path
+            d="M691.858 257.937H687.723L623.766 105.456L558.593 257.937H554.702L506.795 109.879C490.015 57.9659 485.151 43.2998 472.263 20.7187H541.813C540.111 28.4009 538.409 33.7552 538.409 42.1358C538.409 52.6116 541.327 66.8121 549.595 94.7476L573.427 173.898L635.439 19.0891H639.33L698.424 170.406L721.283 94.7476C730.767 62.8546 733.928 46.0934 733.928 35.152C733.928 28.8665 732.956 24.6762 731.74 20.7187H781.836C764.57 42.6014 761.894 49.1197 744.142 101.731L692.344 257.937H691.858Z"
+            fill="currentColor"></path>
+    </g>
+    <mask id="mask3_2056_38" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="746" y="0" width="225" height="274">
+        <rect x="746.57" width="224.22" height="274" fill="currentColor"></rect>
+    </mask>
+    <g>
+        <path
+            d="M866.95 13.5022L936.501 191.125C950.605 227.674 956.685 238.615 970.79 255.376H897.591C900.753 249.091 902.212 242.573 902.212 236.52C902.212 227.441 899.294 219.526 895.159 208.352L888.837 190.892H807.613L801.534 209.749C797.643 220.224 795.94 228.139 795.94 235.822C795.94 241.874 797.4 248.16 800.561 254.911H746.574C760.679 238.848 767.974 228.139 777.945 199.738L822.448 75.8913C824.879 69.6059 825.852 63.786 825.852 59.1301C825.852 50.7494 822.448 45.3951 816.368 40.2737C831.445 37.4801 856.98 25.142 866.464 13.5022H866.95ZM846.036 76.1241L814.909 170.639H881.298L856.736 103.594C852.845 93.1182 849.684 84.272 845.793 76.1241H846.036Z"
+            fill="currentColor"></path>
+    </g>
+    <mask id="mask4_2056_38" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="990" y="0" width="195" height="274">
+        <rect x="990" width="194.79" height="274" fill="currentColor"></rect>
+    </mask>
+    <g>
+        <path
+            d="M1001.19 71.0025C1001.19 50.9821 999.485 35.8504 990.001 20.7188H1056.88C1125.7 20.7188 1160.47 46.559 1160.47 83.8063C1160.47 114.302 1136.64 137.349 1104.78 143.867C1120.1 147.592 1133.72 162.258 1145.4 188.797L1147.83 194.151C1160.72 221.621 1166.31 230.234 1173.36 230.234C1176.52 230.234 1178.95 228.838 1180.66 225.811C1183.58 229.07 1184.79 232.795 1184.79 237.218C1184.79 248.858 1175.31 258.403 1155.85 258.403C1132.99 258.403 1119.37 245.599 1105.51 206.489L1103.81 201.368C1089.71 162.724 1076.57 153.179 1047.39 153.179H1046.66V205.093C1046.66 225.113 1048.12 240.245 1057.85 255.376H990.001C999.728 240.245 1001.19 225.346 1001.19 205.093V71.0025ZM1055.66 41.9031H1046.66V132.693H1054.44C1093.35 132.693 1112.81 117.329 1112.81 86.367C1112.81 55.4052 1096.03 41.9031 1055.9 41.9031H1055.66Z"
+            fill="currentColor"></path>
+    </g>
+    <mask id="mask5_2056_38" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="1203" y="0" width="208" height="274">
+        <rect x="1203.76" width="206.95" height="274" fill="currentColor"></rect>
+    </mask>
+    <g>
+        <path
+            d="M1214.95 71.0025C1214.95 50.9821 1213.49 35.8504 1203.76 20.7187H1252.15C1264.31 20.4859 1281.58 18.6235 1293.74 18.6235C1369.37 18.6235 1410.71 74.4944 1410.71 135.952C1410.71 193.22 1375.45 257.239 1294.47 257.239C1282.31 257.239 1267.47 255.609 1253.13 255.143H1203.76C1213.49 241.409 1214.95 227.674 1214.95 209.283V71.0025ZM1260.42 43.2998V226.277C1271.85 232.097 1285.23 234.89 1299.57 234.89C1342.62 234.89 1359.4 197.41 1359.4 151.782C1359.4 103.594 1344.81 41.9031 1289.12 41.9031C1276.23 41.9031 1266.99 42.1358 1260.42 43.2998Z"
+            fill="currentColor"></path>
+    </g>
+</svg>
+        </footer>
+        
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+        integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+        integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
